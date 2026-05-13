@@ -12,9 +12,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/todos" element={<TodoList />}>
-          {/* solution 1  */}
-            {/* <Route path="/todos/add" element={<AddTodo />} /> */}
-            <Route path="/todos/add" element={<AddTodo />} />
+        
+            <Route path="add" element={<AddTodo />} />
             </Route >
         </Routes>
       </main>
