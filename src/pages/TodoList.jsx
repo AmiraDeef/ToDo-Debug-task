@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link ,Outlet} from "react-router-dom";
 import TodoItem from "../components/TodoItem";
+
 
 const TodoList = () => {
   const myTasks = [
@@ -18,12 +19,15 @@ const TodoList = () => {
       <div className="row">
         <div className="col-md-7">
           <div className="list-group shadow-sm border-0" >
-            {myTasks.map((t) => (
-              <TodoItem key={t.id} task={t} />
+            {myTasks.map((t,idx) => (
+              <TodoItem key={idx} task={t} />
             ))}
           </div>
         </div>
-        <div className="col-md-5"></div>
+        <div className="col-md-5">
+          {/* solution 2 */}
+          <Outlet/>  
+        </div>
       </div>
     </div>
   );
